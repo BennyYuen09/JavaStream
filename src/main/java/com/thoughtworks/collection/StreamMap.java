@@ -21,6 +21,6 @@ public class StreamMap {
     }
 
     public List<Integer> mapLength(List<String> words) {
-        return null;
+        return words.stream().map(word -> word.length()).collect(Collectors.toList());
     }
 }
