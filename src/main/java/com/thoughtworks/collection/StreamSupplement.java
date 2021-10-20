@@ -18,11 +18,11 @@ public class StreamSupplement {
     }
 
     public double getAverage(List<Integer> numbers) {
-        return numbers.stream().mapToInt(i -> i).average().orElse(); //IntStream
+        return numbers.stream().mapToInt(i -> i).average().orElse(0); //IntStream
     }
 
     public int getMaxValue(List<Integer> numbers) {
-        return 0;
+        return numbers.stream().mapToInt(i -> i).max().orElse(0);
     }
 
 }
