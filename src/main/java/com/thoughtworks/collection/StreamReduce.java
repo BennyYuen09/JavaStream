@@ -9,11 +9,13 @@ public class StreamReduce {
                 .stream()
                 .filter(number -> number % 2 == 1)
                 .reduce((first, second) -> second)
-                .orElse(null);
+                .orElse(0);
     }
 
     public String getLongest(List<String> words) {
-        return null;
+        return words.stream()
+                .reduce((first, last) -> (first.length() > last.length()) ? first : last)
+                .orElse("");
     }
 
     public int getTotalLength(List<String> words) {
